@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Basic Arithmetic Calculator</title>
+</head>
+<body>
+  <h2>Basic Arithmetic Calculator</h2>
+  <form onsubmit="return calculate();">
+    <label>First Number:</label>
+    <input type="text" id="num1"><br><br>
+
+    <label>Second Number:</label>
+    <input type="text" id="num2"><br><br>
+
+    <label>Operation:</label>
+    <select id="operation">
+      <option value="add">Addition (+)</option>
+      <option value="subtract">Subtraction (-)</option>
+      <option value="multiply">Multiplication (*)</option>
+      <option value="divide">Division (/)</option>
+    </select><br><br>
+
+    <button type="submit">Calculate</button>
+  </form>
+
+  <h3 id="result"></h3>
+
+  <script>
+    function calculate() {
+      const num1 = parseFloat(document.getElementById("num1").value);
+      const num2 = parseFloat(document.getElementById("num2").value);
+      const operation = document.getElementById("operation").value;
+
+      if (isNaN(num1) || isNaN(num2)) {
+        alert("Please enter valid numeric values.");
+        return false;
+      }
+
+      let result;
+      let operatorSymbol;
+
+      switch (operation) {
+        case "add":
+          result = num1 + num2;
+          operatorSymbol = "+";
+          break;
+        case "subtract":
+          result = num1 - num2;
+          operatorSymbol = "-";
+          break;
+        case "multiply":
+          result = num1 * num2;
+          operatorSymbol = "*";
+          break;
+        case "divide":
+          if (num2 === 0) {
+            alert("Cannot divide by zero.");
+            return false;
+          }
+          result = num1 / num2;
+          operatorSymbol = "/";
+          break;
+        default:
+          alert("Invalid operation selected.");
+          return false;
+      }
+
+      document.getElementById("result").innerText = `${num1} ${operatorSymbol} ${num2} = ${result}`;
+      return false; // prevent form submission
+    }
+  </script>
+</body>
+</html>

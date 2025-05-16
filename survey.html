@@ -1,0 +1,189 @@
+<!DOCTYPE html5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Filbert Njau, Web Developer">
+    <meta name="keywords" content="web development, portfolio, HTML, CSS, JavaScript">
+    <meta name="author" content="Filbert Njau">
+    <title>Survey | Filbert Njau</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Additional CSS for form alignment */
+        .form-group.checkbox-group,
+        .form-group.radio-group {
+            margin: 1rem 0;
+        }
+        
+        .form-group.checkbox-group label,
+        .form-group.radio-group label {
+            display: inline-flex;
+            align-items: center;
+            margin-right: 1.5rem;
+            cursor: pointer;
+        }
+        
+        .form-group.checkbox-group input[type="checkbox"],
+        .form-group.radio-group input[type="radio"] {
+            margin-right: 0.5rem;
+        }
+        
+        .form-group.checkbox-group p,
+        .form-group.radio-group p {
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+        }
+        
+        .form-group.checkbox-options,
+        .form-group.radio-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+            <button id="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main class="survey-container">
+        <h1>Website Feedback Survey</h1>
+        <p>Help me improve my portfolio by sharing your thoughts!</p>
+
+        <form id="surveyForm" action="#" method="POST">
+            <fieldset>
+                <legend>Personal Information</legend>
+                
+                <div class="form-group">
+                    <label for="survey-name">Name:</label>
+                    <input type="text" id="survey-name" name="name" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="survey-email">Email:</label>
+                    <input type="email" id="survey-email" name="email">
+                </div>
+
+                <div class="form-group">
+                    <label for="survey-age">Age Group:</label>
+                    <select id="survey-age" name="age">
+                        <option value="under18">Under 18</option>
+                        <option value="18-25">18-25</option>
+                        <option value="26-35">26-35</option>
+                        <option value="36-50">36-50</option>
+                        <option value="over50">Over 50</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Website Experience</legend>
+                
+                <div class="form-group radio-group">
+                    <p>How did you find my website?</p>
+                    <div class="radio-options">
+                        <label>
+                            <input type="radio" id="search" name="discovery" value="search">
+                            Search Engine
+                        </label>
+                        <label>
+                            <input type="radio" id="social" name="discovery" value="social">
+                            Social Media
+                        </label>
+                        <label>
+                            <input type="radio" id="referral" name="discovery" value="referral">
+                            Referral
+                        </label>
+                        <label>
+                            <input type="radio" id="other-source" name="discovery" value="other">
+                            Other
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <p>Which sections did you visit? (Check all that apply)</p>
+                    <div class="checkbox-options">
+                        <label>
+                            <input type="checkbox" id="home" name="sections" value="home">
+                            Home
+                        </label>
+                        <label>
+                            <input type="checkbox" id="about" name="sections" value="about">
+                            About
+                        </label>
+                        <label>
+                            <input type="checkbox" id="projects" name="sections" value="projects">
+                            Projects
+                        </label>
+                        <label>
+                            <input type="checkbox" id="contact" name="sections" value="contact">
+                            Contact
+                        </label>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <p>How would you rate your overall experience?</p>
+                    <select id="rating" name="rating" required>
+                        <option value="">Select a rating</option>
+                        <option value="5">5 - Excellent</option>
+                        <option value="4">4 - Very Good</option>
+                        <option value="3">3 - Good</option>
+                        <option value="2">2 - Fair</option>
+                        <option value="1">1 - Poor</option>
+                    </select>
+                </div>
+            </fieldset>
+
+            <fieldset>
+                <legend>Additional Feedback</legend>
+                
+                <div class="form-group">
+                    <label for="improvements">What improvements would you suggest?</label>
+                    <textarea id="improvements" name="improvements" rows="4"></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="features">What features would you like to see added?</label>
+                    <textarea id="features" name="features" rows="4"></textarea>
+                </div>
+            </fieldset>
+
+            <div class="form-group checkbox-group">
+                <label>
+                    <input type="checkbox" id="consent" name="consent" required>
+                    I agree to the anonymous use of my feedback for website improvement purposes
+                </label>
+            </div>
+
+            <div class="form-group button-group">
+                <button type="submit" class="btn">Submit Survey</button>
+                <button type="reset" class="btn secondary">Reset Form</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Filbert Njau. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="js/form-validation.js"></script>
+    <script src="js/script.js"></script>
+</body>
+</html>

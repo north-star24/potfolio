@@ -1,0 +1,248 @@
+<!DOCTYPE HTML5>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional portfolio of Filbert Njau, Web Developer">
+    <meta name="keywords" content="web development, portfolio, HTML, CSS, JavaScript">
+    <meta name="author" content="Filbert Njau">
+    <title>About Me | Filbert Njau</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <style>
+        /* Enhanced About Page Styles */
+        .about-container {
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4e8eb 100%);
+            padding: 3rem 0;
+        }
+        
+        .about-content {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 3rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+        
+        .bio {
+            flex: 2;
+            min-width: 300px;
+            background: white;
+            padding: 2.5rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        .personal-info {
+            flex: 1;
+            min-width: 300px;
+        }
+        
+        figure {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+        
+        figure img {
+            width: 200px;
+            height: 200px;
+            border-radius: 50%;
+            object-fit: cover;
+            border: 5px solid #3498db;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+        }
+        
+        figure img:hover {
+            transform: scale(1.05);
+        }
+        
+        figcaption {
+            margin-top: 1rem;
+            font-size: 1.2rem;
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .resume {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+        }
+        
+        h1 {
+            color: #2c3e50;
+            font-size: 2.5rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+            display: inline-block;
+        }
+        
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: #3498db;
+            border-radius: 2px;
+        }
+        
+        h2, h3 {
+            color: #2c3e50;
+            margin: 1.5rem 0 1rem;
+        }
+        
+        .skills-list {
+            margin-left: 1.5rem;
+        }
+        
+        .skills-list > li {
+            margin-bottom: 1.5rem;
+            font-weight: 600;
+            color: #3498db;
+        }
+        
+        .skills-list ul {
+            margin: 0.5rem 0 0 1.5rem;
+        }
+        
+        .skills-list ul li {
+            font-weight: normal;
+            color: #34495e;
+            margin-bottom: 0.3rem;
+            position: relative;
+            padding-left: 1.2rem;
+        }
+        
+        .skills-list ul li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: #3498db;
+            font-weight: bold;
+        }
+        
+        .video-section {
+            max-width: 1200px;
+            margin: 3rem auto 0;
+            padding: 0 2rem;
+            text-align: center;
+        }
+        
+        .video-section h2 {
+            text-align: center;
+            margin-bottom: 1.5rem;
+        }
+        
+        .video-section iframe {
+            border-radius: 10px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            max-width: 100%;
+        }
+        
+        /* Responsive adjustments */
+        @media (max-width: 768px) {
+            .bio, .personal-info {
+                flex: 1 1 100%;
+            }
+            
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="survey.html">Survey</a></li>
+            </ul>
+            <button id="theme-toggle">Dark Mode</button>
+        </nav>
+    </header>
+
+    <main class="about-container">
+        <section class="about-content">
+            <article class="bio">
+                <h1>About Me</h1>
+                <p>I'm a passionate web developer with experienceon  creating modern, responsive websites and web applications. I specialize in building intuitive user interfaces and robust backend systems that deliver exceptional user experiences.</p>
+                
+                <h2>Skills</h2>
+                <ul class="skills-list">
+                    <li>Front-end Development
+                        <ul>
+                            <li>HTML5 & CSS3</li>
+                            <li>JavaScript (ES6+)</li>
+                            <li>React.js</li>
+                            <li>Vue.js</li>
+                        </ul>
+                    </li>
+                    <li>Back-end Development
+                        <ul>
+                            <li>Node.js</li>
+                            <li>Express</li>
+                            <li>Python</li>
+                            <li>PHP</li>
+                        </ul>
+                    </li>
+                    <li>Database
+                        <ul>
+                            <li>MongoDB</li>
+                            <li>MySQL</li>
+                            <li>PostgreSQL</li>
+                        </ul>
+                    </li>
+                </ul>
+            </article>
+
+            <aside class="personal-info">
+                <figure>
+                    <img src="images/me.jpg" alt="Filbert Njau profile picture" usemap="#profilemap">
+                    <map name="profilemap">
+                        <area shape="circle" coords="100,100,50" href="contact.html" alt="Contact me">
+                    </map>
+                    <figcaption>Filbert Njau, Web Developer</figcaption>
+                </figure>
+                
+                <div class="resume">
+                    <h3>Education</h3>
+                    <ol>
+                        <li>BS in Computer Science - University Of Dodoma(2025)</li>
+                        <li>Web Development - The Online University of India </li>
+                    </ol>
+                    
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li>Front-end Developer Certification - Udemy</li>
+                        <li>Full Stack Developer - Udacity</li>
+                    </ul>
+                </div>
+            </aside>
+        </section>
+
+        <section class="video-section">
+            <h2>Useful sources</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qyomWr_C_jA" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen title="Filbert's Development Process"></iframe>
+    </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2023 Filbert Njau. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://github.com" target="_blank">GitHub</a>
+            <a href="https://linkedin.com" target="_blank">LinkedIn</a>
+            <a href="https://twitter.com" target="_blank">Twitter</a>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
